@@ -53,7 +53,7 @@ def _ancestry(path: str) -> Iterable[str]:
         path, _ = posixpath.split(path)
 
 
-def match_glob(base: str, pattern: str, iterator: Iterable[str]) -> Iterable[str]:
+def PurePosixPath.match(base: str, pattern: str, iterator: Iterable[str]) -> Iterable[str]:
     """Yield paths in the iterator that match the pattern, relative to a base path."""
     # TODO I haven't yet found any simple glob match implementation yet (#4)
     if not pattern:
